@@ -6,11 +6,11 @@ require "multi_tenancy_database/version"
 Gem::Specification.new do |spec|
   spec.name          = "multi_tenancy_database"
   spec.version       = MultiTenancyDatabase::VERSION
-  spec.authors       = ["thuocsi.vn"]
-  spec.email         = ["phuong@thuocsi.vn"]
+  spec.authors       = ["Phuong Ngo", "thuocsi.vn"]
+  spec.email         = ["ngohoai.phuong@gmail.com", "phuong@thuocsi.vn"]
 
   spec.summary       = %q{Generate and connect database}
-  spec.description   = %q{Generate new config datanbase and add this conneect to currentt project}
+  spec.description   = %q{Generate new config datanbase and add this connect to current project}
   spec.homepage      = "https://github.com/thuocsi/multi_tenancy_database"
   spec.license       = "MIT"
 

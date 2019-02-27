@@ -1,6 +1,7 @@
 require 'optparse'
 require 'multi_tenancy_database'
 require 'multi_tenancy_database/version'
+require 'multi_tenancy_database/default'
 
 module MultiTenancyDatabase
   class Command
@@ -27,6 +28,7 @@ module MultiTenancyDatabase
     protected
     def check_missing_requirement_options
       mandatory = [:name, :adapter]
+      @options[:adapter] = MultiTenancyDatabase::ADAPTER
       missing = mandatory.select{ |param| @options[param].nil? } 
       if !missing.empty?
         puts "Missing options: #{missing.join(', ')}"
@@ -50,7 +52,7 @@ module MultiTenancyDatabase
         @options[:name] = name.gsub(/^\=+/, '')
       end
 
-      opts.on('-a', '--adapter=posttgresql|mysql', 'Adapter type') do |adapter|
+      opts.on('-a', '--adapter=postgresql|mysql', 'Adapter type, default will postgresql') do |adapter|
         @options[:adapter] = adapter.gsub(/^\=+/, '')
       end
 

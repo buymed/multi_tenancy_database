@@ -2,6 +2,7 @@ require "multi_tenancy_database/version"
 require 'thor'
 
 require_relative 'multi_tenancy_database/version'
+require_relative 'multi_tenancy_database/default'
 require_relative 'multi_tenancy_database/command'
 require_relative 'multi_tenancy_database/generator'
 
