@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/multi_tenancy_database.svg)](https://badge.fury.io/rb/multi_tenancy_database)
+
 # MultiTenancyDatabase
 
 Allowing multiple databases to connect to the same project and still use ActiveRecord to perform operations on the models
