@@ -154,6 +154,15 @@ namespace :#{database_name} do
       end
     end
 
+    namespace :structure do
+      %i(load dump).each do |task_name|
+        task task_name do
+          ENV['SCHEMA'] = 'db/#{database_name}s/structure.sql'
+          Rake::Task["db:structure:\#{task_name}"].invoke
+        end
+      end
+    end
+
     namespace :test do
       task :prepare do
         Rake::Task['db:test:prepare'].invoke
